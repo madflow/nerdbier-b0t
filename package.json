@@ -1,0 +1,17 @@
+{
+  "name": "nerdbeer-b0t",
+  "version": "1.0.0",
+  "description": "Nerbier Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "telegraf": "^3.6.5"
+  },
+  "engines": {
+    "node": ">=6.2.0"
+  }
+}
