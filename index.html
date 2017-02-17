@@ -1,0 +1,31 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://code.onion.com/fartscroll.js"></script>
+</head>
+
+<body>
+    <main></main>
+    <script>
+        var f = 1000;
+
+        var main = document.getElementsByTagName('main');
+
+        for(var m = 1; m<=f; m++) {
+            var b = document.createElement('p');
+            b.innerHTML = '🍺';
+            main[0].appendChild(b);
+        }
+
+        fartscroll();
+
+    </script>
+</body>
+
+</html>

@@ -2,13 +2,14 @@
   "name": "nerdbeer-b0t",
   "version": "1.0.0",
   "description": "Nerbier Bot",
-  "main": "index.js",
+  "main": "bot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "heroku-self-ping": "^1.1.3",
     "telegraf": "^3.6.5"
   },
   "engines": {
