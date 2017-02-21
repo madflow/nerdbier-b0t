@@ -60,6 +60,10 @@ app.hears(/fc/ig, (ctx) => {
     ctx.replyWithHTML('<strong>MEEEEHHHH</strong>');
 });
 
+app.hears(/EffZeh/ig, (ctx) => {
+    ctx.replyWithHTML('<strong>MEEEEHHHH</strong>');
+});
+
 app.hears(/bayer/ig, (ctx) => {
     ctx.replyWithHTML('<strong>NULL VIER</strong>');
 });
