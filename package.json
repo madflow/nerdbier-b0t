@@ -5,7 +5,7 @@
   "main": "bot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "$(npm bin)/static -a 0.0.0.0 -p $PORT public && node bot.js"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
