@@ -1,6 +1,8 @@
 # |\|3RB13RB07
 
-Made with beer in TackaTuckaLand.
+A Simpleton Telegram Bot for unprofessionals done wrong.
+
+Made with tears in Taka Tuka Land.
 
 # 1|\|$74LL4710|\|
 
