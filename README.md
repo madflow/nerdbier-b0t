@@ -14,4 +14,4 @@ $ node bot.js
 
 # Todos
 
-- [ ] Implement Alien Inteligence
+- [ ] Implement Alien Intelligence
