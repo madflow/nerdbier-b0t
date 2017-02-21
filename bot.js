@@ -23,6 +23,15 @@ app.hears('#ebv', (ctx) => {
     ctx.reply('🍺');
 });
 
+app.hears('#zbv', (ctx) => {
+    ctx.reply('🍺🍺');
+});
+
+app.hears('#dbv', (ctx) => {
+    ctx.reply('🍺🍺🍺');
+});
+
+
 app.hears(/nerdbier/ig, (ctx) => {
     ctx.reply('Nerdbier! Wann?');
 });
