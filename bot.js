@@ -24,7 +24,7 @@ app.hears('#ebv', (ctx) => {
 });
 
 app.hears(/nerdbier/ig, (ctx) => {
-    ctx.reply('Wann?');
+    ctx.reply('Nerdbier! Wann?');
 });
 
 app.hears(/nb/ig, (ctx) => {
@@ -33,6 +33,23 @@ app.hears(/nb/ig, (ctx) => {
 
 app.hears('Du...', (ctx) => {
     ctx.replyWithHTML(ctx.from.first_name + ' <strong>Du...</strong>');
+});
+
+app.hears('Wo?', (ctx) => {
+    var url = 'http://nerdbier.herokuapp.com/';
+    ctx.replyWithHTML(ctx.from.first_name + ' <strong>Hier: </strong> <a href="'+ url +'">' + url + '</a>');
+});
+
+app.hears(/schalke/ig, (ctx) => {
+    ctx.replyWithHTML('<h1>NULL VIER</h1>');
+});
+
+app.hears(/fc/ig, (ctx) => {
+    ctx.replyWithHTML('<h1>MEEEEHHHH</h1>');
+});
+
+app.hears(/bayer/ig, (ctx) => {
+    ctx.replyWithHTML('<h1>NULL VIER</h1>');
 });
 
 app.hears('Debug', (ctx) => {

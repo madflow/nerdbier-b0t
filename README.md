@@ -12,6 +12,8 @@ $ node web.js
 $ node bot.js
 ```
 
-# Todos
+# 70d05
 
 - [ ] Implement Alien Intelligence
+
+
