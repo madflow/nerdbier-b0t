@@ -31,6 +31,9 @@ app.hears('#dbv', (ctx) => {
     ctx.reply('🍺🍺🍺');
 });
 
+app.hears('#vbv', (ctx) => {
+    ctx.reply('🍺🍺🍺🍺');
+});
 
 app.hears(/nerdbier/ig, (ctx) => {
     ctx.reply('Nerdbier! Wann?');
