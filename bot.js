@@ -41,7 +41,7 @@ app.hears('Wo?', (ctx) => {
 });
 
 app.hears(/schalke/ig, (ctx) => {
-    ctx.replyWithHTML('strong>NULL VIER</strong>');
+    ctx.replyWithHTML('<strong>NULL VIER</strong>');
 });
 
 app.hears(/fc/ig, (ctx) => {
