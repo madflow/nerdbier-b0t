@@ -36,20 +36,20 @@ app.hears('Du...', (ctx) => {
 });
 
 app.hears('Wo?', (ctx) => {
-    var url = 'http://nerdbier.herokuapp.com/';
+    var url = 'https://nerdbier.herokuapp.com/';
     ctx.replyWithHTML(ctx.from.first_name + ' <strong>Hier: </strong> <a href="'+ url +'">' + url + '</a>');
 });
 
 app.hears(/schalke/ig, (ctx) => {
-    ctx.replyWithHTML('<h1>NULL VIER</h1>');
+    ctx.replyWithHTML('strong>NULL VIER</strong>');
 });
 
 app.hears(/fc/ig, (ctx) => {
-    ctx.replyWithHTML('<h1>MEEEEHHHH</h1>');
+    ctx.replyWithHTML('<strong>MEEEEHHHH</strong>');
 });
 
 app.hears(/bayer/ig, (ctx) => {
-    ctx.replyWithHTML('<h1>NULL VIER</h1>');
+    ctx.replyWithHTML('<strong>NULL VIER</strong>');
 });
 
 app.hears('Debug', (ctx) => {
