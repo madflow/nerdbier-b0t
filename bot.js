@@ -39,12 +39,13 @@ app.hears('#ewv', (ctx) => {
     ctx.reply('🍷');
 });
 
-app.hears(/^#\d{2,5}bv/, (ctx) => {
+app.hears(/^#\d{2,5}(bv|wv)$/gi, (ctx) => {
     let msg = ctx.message.text;
-    let count = parseInt(msg.substr(1, (msg.lastIndexOf('bv')-1)));
+    let count = (msg.lastIndexOf('wv') !== -1) ? parseInt(msg.substr(1, (msg.lastIndexOf('wv')-1))) : parseInt(msg.substr(1, (msg.lastIndexOf('bv')-1)));
+    let char = (msg.lastIndexOf('wv') !== -1) ? '🍷' : '🍺';
     let replyWith = '';
     for(i=0; i<count; i++) {
-        replyWith += '🍺';
+        replyWith += char;
     }
     ctx.reply(replyWith);
 });
