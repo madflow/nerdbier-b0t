@@ -39,7 +39,7 @@ app.hears('#ewv', (ctx) => {
     ctx.reply('🍷');
 });
 
-app.hears('/Mafiatorte/ig', (ctx) => {
+app.hears(/Mafiatorte/ig, (ctx) => {
     ctx.reply('🍕');
 });
 
