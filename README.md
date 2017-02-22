@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/madflow/nerdbier-b0t.svg?branch=master)](https://travis-ci.org/madflow/nerdbier-b0t)
-![DISTRACTION](https://img.shields.io/badge/distraction-passing-green.svg)
+![Distraction](https://img.shields.io/badge/distraction-passing-brightgreen.svg)
+![Coverage](https://img.shields.io/badge/coverage-0%25-brightgreen.svg)
+
 # |\|3RB13RB07
 
 A Simpleton Telegram Bot for unprofessionals done wrong.
