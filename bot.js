@@ -6,7 +6,7 @@ const nerdTalk = [
     'Ich erwarte alle in der Bahn um 18.01!',
     'Heute Schinaman?',
     'Du ist gleich Fleisch.',
-    'Immer doch besser als nichts zu tun.',
+    'Immer noch besser als nichts zu tun.',
     '🍺'
 ];
 
