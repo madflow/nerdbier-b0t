@@ -74,6 +74,10 @@ app.hears('Debug', (ctx) => {
 
 });
 
+app.hears(/hier schreit nur einer/ig, (ctx) => {
+    ctx.reply('Uwe und sonst keiner!');
+});
+
 app.on('message', (ctx) => {
     if(ctx.message.document) {
         ctx.reply('/fake');
