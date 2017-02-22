@@ -3,7 +3,7 @@ const Telegraf = require('telegraf');
 const app = new Telegraf(process.env.BOT_TOKEN);
 
 const nerdTalk = [
-    'Ich erwarte alle in der Bahn um 18.01!',
+    'erwartet _alle_ in der Bahn um 18.11.',
     'Heute Schinaman? 🍱',
     'Du ist gleich Fleisch.',
     'Immer noch besser als nichts zu tun.',
@@ -39,10 +39,9 @@ app.hears('#ewv', (ctx) => {
     ctx.reply('🍷');
 });
 
-app.hears(/^#\d{2,5}(bv|wv)$/gi, (ctx) => {
-    let msg = ctx.message.text;
-    let count = (msg.lastIndexOf('wv') !== -1) ? parseInt(msg.substr(1, (msg.lastIndexOf('wv')-1))) : parseInt(msg.substr(1, (msg.lastIndexOf('bv')-1)));
-    let char = (msg.lastIndexOf('wv') !== -1) ? '🍷' : '🍺';
+app.hears(/^#(\d{1,7})(bv|wv|cv)$/gi, (ctx) => {
+    let count = ctx.match[1];
+    let char = (ctx.match[2] == 'wv') ? '🍷' :(ctx.match[2] == 'cv') ? '🍹' : '🍺';
     let replyWith = '';
     for(i=0; i<count; i++) {
         replyWith += char;
