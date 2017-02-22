@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/madflow/nerdbier-b0t.svg?branch=master)](https://travis-ci.org/madflow/nerdbier-b0t)
+
+
 # |\|3RB13RB07
 
 A Simpleton Telegram Bot for unprofessionals done wrong.
