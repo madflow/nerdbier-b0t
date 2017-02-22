@@ -40,7 +40,6 @@ app.hears('#ewv', (ctx) => {
 });
 
 app.hears(/^#(\d{1,7})(bv|wv|cv)$/gi, (ctx) => {
-    let msg = ctx.message.text;
     let count = ctx.match[1];
     let char = (ctx.match[2] == 'wv') ? '🍷' :(ctx.match[2] == 'cv') ? '🍹' : '🍺';
     let replyWith = '';
