@@ -4,7 +4,7 @@ const app = new Telegraf(process.env.BOT_TOKEN);
 
 const nerdTalk = [
     'Ich erwarte alle in der Bahn um 18.01!',
-    'Heute Schinaman?',
+    'Heute Schinaman? 🍱',
     'Du ist gleich Fleisch.',
     'Immer noch besser als nichts zu tun.',
     '🍺'
@@ -33,6 +33,14 @@ app.hears('#dbv', (ctx) => {
 
 app.hears('#vbv', (ctx) => {
     ctx.reply('🍺🍺🍺🍺');
+});
+
+app.hears('#ewv', (ctx) => {
+    ctx.reply('🍷');
+});
+
+app.hears('/Mafiatorte/ig', (ctx) => {
+    ctx.reply('🍕');
 });
 
 app.hears(/nerdbier/ig, (ctx) => {
