@@ -1,7 +1,7 @@
 {
-  "name": "nerdbeer-b0t",
+  "name": "nerdbier-b0t",
   "version": "1.0.0",
-  "description": "Nerbier Bot",
+  "description": "Nerdbier Bot",
   "main": "bot.js",
   "scripts": {
     "test": "$(npm bin)/jshint *.js",
