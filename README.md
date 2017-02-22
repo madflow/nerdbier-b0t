@@ -10,8 +10,7 @@ Made with tears in Taka Tuka Land.
 
 ```
 $ npm install
-$ node web.js
-$ node bot.js
+$ npm start
 ```
 
 # 70d05
