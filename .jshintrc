@@ -1,5 +1,6 @@
 {
     "esversion": 6,
     "strict": false,
-    "unused": true
+    "unused": true,
+    "sub": true
 }
