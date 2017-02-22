@@ -2,6 +2,12 @@ const Telegraf = require('telegraf');
 
 const app = new Telegraf(process.env.BOT_TOKEN);
 
+const vMap = {
+    bv: '🍺',
+    wv: '🍷',
+    cv: '🍹'
+};
+
 const nerdTalk = [
     'erwartet _alle_ in der Bahn um 18.11.',
     'Heute Schinaman? 🍱',
@@ -13,6 +19,7 @@ const nerdTalk = [
 function randomArrayItem (items) {
     return items[Math.floor(Math.random()*items.length)];
 }
+
 
 app.command('start', (ctx) => {
   console.log('start', ctx.from);
@@ -39,11 +46,16 @@ app.hears('#ewv', (ctx) => {
     ctx.reply('🍷');
 });
 
+app.hears('#ecv', (ctx) => {
+    ctx.reply(vMap['cv']);
+});
+
 app.hears(/^#(\d{1,7})(bv|wv|cv)$/gi, (ctx) => {
     let count = ctx.match[1];
-    let char = (ctx.match[2] == 'wv') ? '🍷' :(ctx.match[2] == 'cv') ? '🍹' : '🍺';
+    let v = ctx.match[2];
+    let char = vMap[v] ? vMap[v] : '☕'; 
     let replyWith = '';
-    for(i=0; i<count; i++) {
+    for(i=0; i < count; i++) {
         replyWith += char;
     }
     ctx.reply(replyWith);
