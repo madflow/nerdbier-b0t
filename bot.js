@@ -55,7 +55,7 @@ app.hears('#ecv', (ctx) => {
     ctx.reply(vMap['cv']);
 });
 
-app.hears(/^#(\d{1,7})(bv|wv|cv)$/gi, (ctx) => {
+app.hears(/^#(\d{1,7})(bv|wv|cv)$/i, (ctx) => {
     let count = ctx.match[1];
     let v = ctx.match[2];
     let char = vMap[v] ? vMap[v] : '☕'; 
@@ -66,15 +66,15 @@ app.hears(/^#(\d{1,7})(bv|wv|cv)$/gi, (ctx) => {
     ctx.reply(replyWith);
 });
 
-app.hears(/Mafiatorte/ig, (ctx) => {
+app.hears(/Mafiatorte/i, (ctx) => {
     ctx.reply('🍕');
 });
 
-app.hears(/nerdbier/ig, (ctx) => {
+app.hears(/nerdbier/i, (ctx) => {
     ctx.reply('Nerdbier! Wann?');
 });
 
-app.hears(/nb/ig, (ctx) => {
+app.hears(/nb/i, (ctx) => {
     let item = randomArrayItem(nerdTalk);
     ctx.reply(item);
 });
@@ -88,19 +88,19 @@ app.hears('Wo?', (ctx) => {
     ctx.replyWithHTML(ctx.from.first_name + ' <strong>Hier: </strong> <a href="'+ url +'">' + url + '</a>');
 });
 
-app.hears(/schalke/ig, (ctx) => {
+app.hears(/schalke/, (ctx) => {
     ctx.replyWithHTML('<strong>NULL VIER</strong>');
 });
 
-app.hears(/fc/ig, (ctx) => {
+app.hears(/fc/i, (ctx) => {
     ctx.replyWithHTML('<strong>MEEEEHHHH</strong>');
 });
 
-app.hears(/EffZeh/ig, (ctx) => {
+app.hears(/EffZeh/i, (ctx) => {
     ctx.replyWithHTML('<strong>MEEEEHHHH</strong>');
 });
 
-app.hears(/bayer/ig, (ctx) => {
+app.hears(/bayer/i, (ctx) => {
     ctx.replyWithHTML('<strong>NULL VIER</strong>');
 });
 
@@ -108,7 +108,7 @@ app.hears('Debug', (ctx) => {
     ctx.reply(JSON.stringify(ctx.message));
 });
 
-app.hears(/hier schreit nur einer/ig, (ctx) => {
+app.hears(/hier schreit nur einer/i, (ctx) => {
     ctx.reply('Uwe und sonst keiner!');
 });
 
