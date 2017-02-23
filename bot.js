@@ -104,9 +104,7 @@ app.hears(/bayer/ig, (ctx) => {
 });
 
 app.hears('Debug', (ctx) => {
-
     ctx.reply(JSON.stringify(ctx.message));
-
 });
 
 app.hears(/hier schreit nur einer/ig, (ctx) => {
@@ -122,6 +120,10 @@ app.hears(/leet me (.*)/i, (ctx) => {
 
 app.hears(/cool/i, (ctx) => {
     ctx.reply(cool());
+});
+
+app.hears('+s', (ctx) => {
+    ctx.reply(ctx.from.first_name + ' <strong>¯\(°_o)/¯</strong>');
 });
 
 app.on('message', (ctx) => {
