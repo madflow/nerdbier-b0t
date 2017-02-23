@@ -14,7 +14,7 @@ Made with tears in Taka Tuka Land.
 
     3. How do I create a bot?
 
-    There's a… bot for that. Just talk to BotFather (described below) and follow a few simple steps. Once you've created a bot and received your authorization token, head down to the Bot API manual to see what you can teach your bot to do.
+    There's a… bot for that. Just talk to BotFather and follow a few simple steps. Once you've created a bot and received your authorization token, head down to the Bot API manual to see what you can teach your bot to do.
 
 # 1|\|$74LL4710|\|
 
