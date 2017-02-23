@@ -2,6 +2,8 @@ const Telegraf = require('telegraf');
 const leet = require('leet');
 const cool = require('cool-ascii-faces');
 const pokemon = require('pokemon');
+const cows = require('cows');
+var uniqueRandomArray = require('unique-random-array');
 
 const app = new Telegraf(process.env.BOT_TOKEN);
 
@@ -20,11 +22,6 @@ const nerdTalk = [
     '🍺',
     '¯\(°_o)/¯'
 ];
-
-function randomArrayItem (items) {
-    return items[Math.floor(Math.random()*items.length)];
-}
-
 
 app.command('start', (ctx) => {
   console.log('start', ctx.from);
@@ -75,9 +72,15 @@ app.hears(/nerdbier/i, (ctx) => {
 });
 
 app.hears(/nb/i, (ctx) => {
-    let item = randomArrayItem(nerdTalk);
-    ctx.reply(item);
+    let item = uniqueRandomArray(nerdTalk);
+    ctx.reply(item());  
 });
+
+app.hears(/moo/i, (ctx) => {
+    let item = uniqueRandomArray(cows());
+    ctx.reply(item());
+});
+
 
 app.hears('Du...', (ctx) => {
     ctx.replyWithHTML(ctx.from.first_name + ' <strong>Du...</strong>');
