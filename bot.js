@@ -1,6 +1,6 @@
 const Telegraf = require('telegraf');
 const leet = require('leet');
-const cool = require('cool-ascii-faces')
+const cool = require('cool-ascii-faces');
 
 const app = new Telegraf(process.env.BOT_TOKEN);
 
