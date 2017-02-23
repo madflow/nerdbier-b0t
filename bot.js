@@ -1,6 +1,7 @@
 const Telegraf = require('telegraf');
 const leet = require('leet');
 const cool = require('cool-ascii-faces');
+const pokemon = require('pokemon');
 
 const app = new Telegraf(process.env.BOT_TOKEN);
 
@@ -125,6 +126,11 @@ app.hears(/cool/i, (ctx) => {
 app.hears('+s', (ctx) => {
     ctx.replyWithHTML(ctx.from.first_name + ' <strong>¯\(°_o)/¯</strong>');
 });
+
+app.hears('+p', (ctx) => {
+    ctx.replyWithHTML('Ein wildes <strong>' +  pokemon.random('de')  +  '</strong> erscheint.');
+});
+
 
 app.on('message', (ctx) => {
     if(ctx.message.document) {
