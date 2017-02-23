@@ -123,7 +123,7 @@ app.hears(/cool/i, (ctx) => {
 });
 
 app.hears('+s', (ctx) => {
-    ctx.reply(ctx.from.first_name + ' <strong>¯\(°_o)/¯</strong>');
+    ctx.replyWithHTML(ctx.from.first_name + ' <strong>¯\(°_o)/¯</strong>');
 });
 
 app.on('message', (ctx) => {
