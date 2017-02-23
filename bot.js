@@ -130,6 +130,10 @@ app.hears('+s', (ctx) => {
     ctx.replyWithHTML(ctx.from.first_name + ' <strong>¯\(°_o)/¯</strong>');
 });
 
+app.hears('+t', (ctx) => {
+    ctx.replyWithHTML(ctx.from.first_name + ' <strong>PR plz</strong>');
+});
+
 app.hears('+p', (ctx) => {
     ctx.replyWithHTML('Ein wildes <strong>' +  pokemon.random('de')  +  '</strong> erscheint.');
 });
