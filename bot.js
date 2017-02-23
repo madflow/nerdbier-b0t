@@ -1,4 +1,6 @@
 const Telegraf = require('telegraf');
+const leet = require('leet');
+const cool = require('cool-ascii-faces')
 
 const app = new Telegraf(process.env.BOT_TOKEN);
 
@@ -14,7 +16,8 @@ const nerdTalk = [
     'Du ist gleich Fleisch.',
     'PR plz',
     'Immer noch besser als nichts zu tun.',
-    '🍺'
+    '🍺',
+    '¯\(°_o)/¯'
 ];
 
 function randomArrayItem (items) {
@@ -71,7 +74,8 @@ app.hears(/nerdbier/ig, (ctx) => {
 });
 
 app.hears(/nb/ig, (ctx) => {
-    ctx.reply(randomArrayItem(nerdTalk));
+    let item = randomArrayItem(nerdTalk);
+    ctx.reply(item);
 });
 
 app.hears('Du...', (ctx) => {
@@ -107,6 +111,17 @@ app.hears('Debug', (ctx) => {
 
 app.hears(/hier schreit nur einer/ig, (ctx) => {
     ctx.reply('Uwe und sonst keiner!');
+});
+
+app.hears(/leet me (.*)/i, (ctx) => {
+    let msg = ctx.match[1];
+    if(msg) {
+        ctx.reply(leet.convert(msg));
+    }
+});
+
+app.hears(/cool/i, (ctx) => {
+    ctx.reply(cool());
 });
 
 app.on('message', (ctx) => {
