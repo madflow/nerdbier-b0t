@@ -12,6 +12,7 @@ const nerdTalk = [
     'erwartet _alle_ in der Bahn um 18.11.',
     'Heute Schinaman? 🍱',
     'Du ist gleich Fleisch.',
+    'PR plz',
     'Immer noch besser als nichts zu tun.',
     '🍺'
 ];
