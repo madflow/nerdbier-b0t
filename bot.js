@@ -57,10 +57,15 @@ app.hears(/^#(\d{1,7})(bv|wv|cv)$/i, (ctx) => {
     let v = ctx.match[2];
     let char = vMap[v] ? vMap[v] : '☕'; 
     let replyWith = '';
-    for(i=0; i < count; i++) {
-        replyWith += char;
+
+    if(count <= 0) {
+        replyWith = (char + ' segmentation fault' + char);        
+    } else {
+        for(i=0; i < count; i++) {
+            replyWith += char;
+        }
     }
-    ctx.reply(replyWith);
+    ctx.replyWithHTML(replyWith);
 });
 
 app.hears(/Mafiatorte/i, (ctx) => {
