@@ -96,8 +96,8 @@ app.hears('Wo?', (ctx) => {
     ctx.replyWithHTML(ctx.from.first_name + ' <strong>Hier: </strong> <a href="'+ url +'">' + url + '</a>');
 });
 
-app.hears(/schalke/, (ctx) => {
-    ctx.replyWithHTML('<strong>NULL VIER</strong>');
+app.hears(/schalke/i, (ctx) => {
+    ctx.replyWithHTML('<strong>HAND!!!</strong>');
 });
 
 app.hears(/fc/i, (ctx) => {
