@@ -97,7 +97,7 @@ app.hears('Wo?', (ctx) => {
 });
 
 app.hears(/schalke/i, (ctx) => {
-    ctx.replyWithHTML('<strong>HAND!!!</strong>');
+    ctx.replyWithHTML('<strong>NULL VIER</strong>');
 });
 
 app.hears(/fc/i, (ctx) => {
