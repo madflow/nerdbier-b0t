@@ -171,7 +171,7 @@ function getAnswer(ctx, txt) {
         }
     });
 }
-
+/**
 app.hears(() => {
     let wrds = wWords.join('|');
     return new RegExp(wrds, 'igm');
@@ -188,7 +188,7 @@ app.hears(() => {
 
     });
 
-});
+})*/
 
 app.on('message', (ctx) => {
     if (ctx.message.document) {
