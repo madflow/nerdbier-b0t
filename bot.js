@@ -4,8 +4,6 @@ const cool = require('cool-ascii-faces');
 const pokemon = require('pokemon');
 const cows = require('cows');
 var uniqueRandomArray = require('unique-random-array');
-var request = require('request');
-var natural = require('natural');
 
 const app = new Telegraf(process.env.BOT_TOKEN);
 
@@ -14,10 +12,6 @@ const vMap = {
     wv: '🍷',
     cv: '🍹'
 };
-
-const wWords = [
-    'warum', 'wo', 'wann', 'wie', 'wieso', 'weshalb', 'why', 'where', 'when', 'wheshalb'
-];
 
 const nerdTalk = [
     'erwartet _alle_ in der Bahn um 18.11.',
@@ -147,48 +141,6 @@ app.hears('+t', (ctx) => {
 app.hears('+p', (ctx) => {
     ctx.replyWithHTML('Ein wildes <strong>' + pokemon.random('de') + '</strong> erscheint.');
 });
-
-
-function getAnswer(ctx, txt) {
-
-    var url = 'http://api.duckduckgo.com/?q=' + encodeURIComponent(txt) + '&format=json&pretty=1&no_redirect=1';
-
-    request(url, (error, response, body) => {
-        var info = JSON.parse(body);
-        var abstract = info.Abstract || null;
-        var relatedTopics = info.RelatedTopics.length > 0 ? info.RelatedTopics : null;
-
-        if (abstract) {
-            ctx.replyWithHTML('Nun Ja... ' + txt + ' ... ' + abstract);
-        }
-
-        if (relatedTopics) {
-            
-            var topic = relatedTopics[0].Result || null;
-            if(topic) {
-                ctx.replyWithHTML('Ja gut öööh ... ' + txt + ' ... ' + topic);
-            }
-        }
-    });
-}
-/**
-app.hears(() => {
-    let wrds = wWords.join('|');
-    return new RegExp(wrds, 'igm');
-}, (ctx) => {
-    let txt = ctx.message.text.trim();
-
-    tokenizer = new natural.WordTokenizer();
-
-    tokenizer.tokenize(txt).forEach((value) => {
-
-        if (value.length > 3) {
-            getAnswer(ctx, value);
-        }
-
-    });
-
-})*/
 
 app.on('message', (ctx) => {
     if (ctx.message.document) {
