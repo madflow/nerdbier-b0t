@@ -20,7 +20,7 @@ const nerdTalk = [
     'PR plz',
     'Immer noch besser als nichts zu tun.',
     '🍺',
-    '¯\(°_o)/¯'
+    '¯\(°_o)/¯',
     'Alter Table'
 ];
 
