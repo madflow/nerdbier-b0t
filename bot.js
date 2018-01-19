@@ -21,6 +21,7 @@ const nerdTalk = [
     'Immer noch besser als nichts zu tun.',
     '🍺',
     '¯\(°_o)/¯'
+    'Alter Table'
 ];
 
 app.command('start', (ctx) => {
